@@ -22,21 +22,48 @@ console.log("O produto " +produtoembalado.nome+ ",da categoria " +produtoembalad
 
 
 //atividade 03
+
 class Imóvel{
-    quartos;
-    tipo;
-    endereco;
+    constructor(quartos,tipo,endereco){
+    this.quartos = quartos;
+    this.tipo = tipo;
+    this.endereco = endereco;
+    }
+    
+    exibirInformacoes(){
+    return ` Tipo = ${this.tipo}\n Quartos: ${this.quartos}\n Endereço: ${this.endereco}`
+    };
+    }
+    
+    
+    
+    const Casa = new Imóvel( 4,"Casa","Rua da amizade,729 - Bairro Alegre");
+    
+    
+    const Apartamento = new Imóvel(2, "Apartamento", "Avenida da Paz, 123 - Centro");
+    
+    console.log(Casa.exibirInformacoes());
+    
+    console.log(Apartamento.exibirInformacoes());
+    
+// aividade 04
 
-};
+class Veiculo{
+    constructor(marca,modelo,ano){
+    this.marca = marca;
+    this.modelo = modelo;
+    this.ano = ano;
 
-const Casa= {
-    Quartos: 4,
-    Tipo: "Casa",
-    Endereço: "Rua da Amizade, 789 - Bairro Alegre"
-};
-
-const Apartamento ={
-    Quartos: 2,
-    Tipo: "Apartamento",
-    Endereço: "Avenida da Paz, 123 - Centro"
-};
+    }
+    exibirDetalhes(){
+    return` Marca: ${this.marca} \n Modelo: ${this.modelo} \n Ano: ${this.ano}`
+    };
+    }
+    
+    const Carro = new Veiculo("Toyota", "Corolla",2022 );
+    
+    const Motocicleta = new Veiculo("Honda","CBR 600RR", 2021);
+    
+    console.log(Carro.exibirDetalhes());
+    
+    console.log(Motocicleta.exibirDetalhes());
