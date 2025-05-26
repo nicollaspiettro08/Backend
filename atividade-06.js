@@ -1,6 +1,13 @@
 import input, { questionInt } from 'readline-sync';
 //1
-let palavra = input("digite uma palavra: ");
-function palavrao(){
-    
+let frase = input.question("digite uma palavra: ");
+
+function g(texto){
+    return texto.toUppercase();
 }
+const cxalta = function(texto){
+    return texto.toUppercase();
+}
+
+console.log(cxalta)
+console.log(g(frase));
